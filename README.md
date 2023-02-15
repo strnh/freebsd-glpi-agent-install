@@ -4,6 +4,8 @@ for  FreeBSD user tips
 # Prerequisite:
 
 * perl5.x installed
+* "devel/git" installd
+* "ftp/curl" installed 
 * "ports-mgmt/portmaster" installed 
 * "sysutils/dmidecode" installed
 
