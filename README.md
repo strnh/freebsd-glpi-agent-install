@@ -38,14 +38,51 @@ Successfully installed App-cpanminus-1.7046
 
 </pre>
 
-</pre>
-
-* 
-<pre>
-
-</pre>
-
 * Run the following command directly under the glpi-agent directory obtained by git to get the necessary perl modules via cpan. 
 <pre>
+[/usr/local/src/glpi-agent]$ ls -la
+total 275
+drwxr-xr-x  17 root  wheel      30 Feb 14 11:08 .
+drwxr-xr-x   3 root  wheel       3 Feb 14 11:03 ..
+drwxr-xr-x   8 root  wheel      13 Feb 13 12:26 .git
+drwxr-xr-x   5 root  wheel       5 Feb 13 12:26 .github
+-rw-r--r--   1 root  wheel     348 Feb 13 12:26 .gitignore
+-rw-r--r--   1 root  wheel    1006 Feb 13 12:26 CONTRIB.md
+-rw-r--r--   1 root  wheel  155660 Feb 13 12:26 Changes
+-rw-r--r--   1 root  wheel   17987 Feb 13 12:26 LICENSE
+-rw-r--r--   1 root  wheel     457 Feb 13 12:26 MANIFEST.SKIP
+-rw-r--r--   1 root  wheel    1839 Feb 14 11:07 META.yml
+-rw-r--r--   1 root  wheel    3305 Feb 14 11:07 MYMETA.json
+-rw-r--r--   1 root  wheel    2012 Feb 14 11:07 MYMETA.yml
+-rw-r--r--   1 root  wheel  122488 Feb 14 11:07 Makefile
+-rw-r--r--   1 root  wheel   10752 Feb 13 12:26 Makefile.PL
+-rw-r--r--   1 root  wheel    6102 Feb 13 12:26 README.md
+-rw-r--r--   1 root  wheel    3204 Feb 13 12:26 THANKS
+drwxr-xr-x   2 root  wheel      12 Feb 13 12:26 bin
+drwxr-xr-x   8 root  wheel       8 Feb 13 12:27 blib
+drwxr-xr-x   6 root  wheel       6 Feb 13 12:26 contrib
+drwxr-xr-x   6 root  wheel      22 Feb 13 12:26 debian
+drwxr-xr-x   2 root  wheel      10 Feb 13 12:26 etc
+drwxr-xr-x   4 root  wheel       4 Feb 14 11:07 inc
+drwxr-xr-x   3 root  wheel       4 Feb 13 12:26 lib
+-rw-r--r--   1 root  wheel       0 Feb 14 11:07 pm_to_blib
+drwxr-xr-x  19 root  wheel      19 Feb 13 12:26 resources
+drwxr-xr-x   3 root  wheel       7 Feb 13 12:26 share
+drwxr-xr-x   3 root  wheel       4 Feb 13 12:26 snap
+drwxr-xr-x   6 root  wheel      17 Feb 13 12:26 t
+drwxr-xr-x   2 root  wheel      13 Feb 13 12:26 tools
+drwxr-xr-x   5 root  wheel       6 Feb 14 11:06 var
+
 [/usr/local/src/glpi-agent ] root # >>> cpanm --installdeps.
+--> Working on .
+Configuring GLPI-Agent-1.5-dev ... OK
+==> Found dependencies: Test::Deep, DateTime, UNIVERSAL::require, File::Which, IPC::Run, Text::Template, IO::Capture::Stderr, Test::Exception, File::Copy::Recursive, Net::IP, LWP::Protocol::https, HTTP::Server::Simple::Authen, Test::NoWarnings, Parallel::ForkManager, HTTP::Server::Simple, Test::MockObject, Cpanel::JSON::XS, HTTP::Proxy, Test::Compile, LWP::UserAgent, Data::UUID, XML::LibXML, Test::MockModule
+--> Working on Test::Deep
+Fetching http://www.cpan.org/authors/id/R/RJ/RJBS/Test-Deep-1.204.tar.gz ... OK
+Configuring Test-Deep-1.204 ... OK
+Building and testing Test-Deep-1.204 ... OK
+Successfully installed Test-Deep-1.204
+
+-- <snip> --
+
 </pre>
