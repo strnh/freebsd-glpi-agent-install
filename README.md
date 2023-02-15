@@ -7,7 +7,7 @@ for  FreeBSD user
 * "ports-mgmt/portmaster" installed 
 * 
 
-# GLPI Settings 
+# GLPI-agent source
 The glpi-agent settings are as follows: 
 
 * Obtained by git from GitHub. 
