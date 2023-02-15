@@ -7,7 +7,7 @@ for  FreeBSD user
 * "ports-mgmt/portmaster" installed 
 * 
 
-＃ GLPI Settings 
+# GLPI Settings 
 The glpi-agent settings are as follows: 
 
 * Obtained by git from GitHub. 
@@ -28,7 +28,7 @@ Exapmle:
 
 
 </pre>
-* cpan-minus install from cpan
+# cpan-minus install from cpan
 
 <pre>
 $ sudo curl -L https://cpanmin.us | perl - --sudo App::cpanminus 
