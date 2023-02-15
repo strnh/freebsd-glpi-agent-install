@@ -91,9 +91,12 @@ Successfully installed Test-Deep-1.204
 * PERL module XML::LibXML depend on textproc/libxml2. if CPAN install fail cause by "libxml2" then install from /usr/ports/textproc/libxml2
 
 # p5-HTTP-Proxy
-* HTTP::Proxy 
+* Failing HTTP::Proxy install with cpanminus  -> 
+<pre>
+$ sudo portmaster -Gdy \*/p5-HTTP-Proxy
+</pre>
 
-== Warning message with build HTTP::Server == 
+## Warning message with build HTTP::Server ## 
 
 <pre>
 If you're seeing this warning, your toolchain is really, really old* and
