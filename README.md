@@ -1,7 +1,7 @@
 # freebsd-glpi-agent-install
 for  FreeBSD user 
 
-== GLPI Settings == 
+＃ GLPI Settings 
 The glpi-agent settings are as follows: 
 
 * Obtained by git from GitHub. 
