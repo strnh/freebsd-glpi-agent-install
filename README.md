@@ -86,3 +86,39 @@ Successfully installed Test-Deep-1.204
 -- <snip> --
 
 </pre>
+
+# p5-XML-LibXML 
+* PERL module XML::LibXML depend on textproc/libxml2. if CPAN install fail cause by "libxml2" then install from /usr/ports/textproc/libxml2
+
+# p5-HTTP-Proxy
+* HTTP::Proxy 
+
+== Warning message with build HTTP::Server == 
+
+<pre>
+If you're seeing this warning, your toolchain is really, really old* and
+you'll almost certainly have problems installing CPAN modules from this
+century. But never fear, dear user, for we have the technology to fix this!
+
+If you're using CPAN.pm to install things, then you can upgrade it using:
+
+    cpan CPAN
+
+If you're using CPANPLUS to install things, then you can upgrade it using:
+
+    cpanp CPANPLUS
+
+If you're using cpanminus, you shouldn't be seeing this message in the first
+place, so please file an issue on github.
+
+If you're using a packaging tool through a unix distribution, this issue
+should be reported to the package manager.
+
+If you're installing manually, please retrain your fingers to run Build.PL
+when present instead of Makefile.PL.
+
+This public service announcement was brought to you by the Perl Toolchain
+Gang, the irc.perl.org #toolchain IRC channel, and the number 42.
+..
+
+</pre>
