@@ -7,9 +7,11 @@ The glpi-agent settings are as follows:
 * Obtained by git from GitHub. 
 https://github.com/glpi-project/glpi-agent 
 * Since multiple perl modules are required, the following tasks are performed: 
-* Introduction of cpan-minus → p5-module-instlall from /usr/ports 
+* Introduction of cpan-minus  
+**  Install → p5-module-instlall from /usr/ports 
 Exapmle:
 <pre>
+
 ===>>> The following actions were performed:
 	Installation of converters/p5-JSON (p5-JSON-4.10)
 	Installation of devel/p5-File-Remove (p5-File-Remove-1.58)
@@ -18,7 +20,31 @@ Exapmle:
 	Installation of textproc/p5-YAML-Tiny (p5-YAML-Tiny-1.73)
 	Installation of devel/p5-Module-Install (p5-Module-Install-1.19)
 
+
 </pre>
+* cpan-minus install from cpan
+
+<pre>
+$ sudo curl -L https://cpanmin.us | perl - --sudo App::cpanminus 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  295k  100  295k    0     0   434k      0 --:--:-- --:--:-- --:--:--  433k
+--> Working on App::cpanminus
+Fetching http://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz ... OK
+Configuring App-cpanminus-1.7046 ... OK
+Building and testing App-cpanminus-1.7046 ... OK
+Successfully installed App-cpanminus-1.7046
+1 distribution installed
+
+</pre>
+
+</pre>
+
+* 
+<pre>
+
+</pre>
+
 * Run the following command directly under the glpi-agent directory obtained by git to get the necessary perl modules via cpan. 
 <pre>
 [/usr/local/src/glpi-agent ] root # >>> cpanm --installdeps.
