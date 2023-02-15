@@ -94,10 +94,10 @@ Successfully installed Test-Deep-1.204
 
 </pre>
 
-# p5-XML-LibXML 
+# deploy and build p5-XML-LibXML from ports 
 * PERL module XML::LibXML depend on textproc/libxml2. if CPAN install fail cause by "libxml2" then install from /usr/ports/textproc/libxml2
 
-# p5-HTTP-Proxy
+# deploy and build p5-HTTP-Proxy from ports
 * Failing HTTP::Proxy install with cpanminus  -> 
 <pre>
 Fetching http://www.cpan.org/authors/id/H/HA/HAARG/Test-Needs-0.002010.tar.gz ... OK
