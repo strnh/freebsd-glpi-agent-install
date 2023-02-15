@@ -44,6 +44,7 @@ Successfully installed App-cpanminus-1.7046
 
 </pre>
 
+# fetch libraries from cpan and build.
 * Run the following command directly under the glpi-agent directory obtained by git to get the necessary perl modules via cpan. 
 <pre>
 [/usr/local/src/glpi-agent]$ ls -la
