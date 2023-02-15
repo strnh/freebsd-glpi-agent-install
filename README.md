@@ -5,7 +5,7 @@ for  FreeBSD user tips
 
 * perl5.x installed
 * "ports-mgmt/portmaster" installed 
-* 
+* "sysutils/dmidecode" installed
 
 # GLPI-agent source
 The glpi-agent settings are as follows: 
