@@ -1,5 +1,5 @@
 # freebsd-glpi-agent-install
-for  FreeBSD user 
+for  FreeBSD user tips
 
 # Prerequisite:
 
