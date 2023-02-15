@@ -1,6 +1,12 @@
 # freebsd-glpi-agent-install
 for  FreeBSD user 
 
+# Prerequisite:
+
+* perl5.x installed
+* "ports-mgmt/portmaster" installed 
+* 
+
 ＃ GLPI Settings 
 The glpi-agent settings are as follows: 
 
