@@ -113,7 +113,7 @@ Building and testing HTTP-Proxy-0.304 ...
  
 Countermeasure:
 <pre>
-$ sudo portmaster -Gdy \*/p5-HTTP-Proxy
+$ sudo portmaster -Gdy www/p5-HTTP-Proxy
 </pre>
 
 ## Warning message with build HTTP::Server ## 
