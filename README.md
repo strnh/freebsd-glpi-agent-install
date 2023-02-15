@@ -99,6 +99,20 @@ Successfully installed Test-Deep-1.204
 # p5-HTTP-Proxy
 * Failing HTTP::Proxy install with cpanminus  -> 
 <pre>
+Fetching http://www.cpan.org/authors/id/H/HA/HAARG/Test-Needs-0.002010.tar.gz ... OK
+Configuring Test-Needs-0.002010 ... OK
+Building and testing Test-Needs-0.002010 ... OK
+Successfully installed Test-Needs-0.002010
+Building and testing HTTP-Daemon-6.14 ... OK
+Successfully installed HTTP-Daemon-6.14
+Building and testing HTTP-Proxy-0.304 ... 
+
+-- hang up --
+
+</pre>
+ 
+Countermeasure:
+<pre>
 $ sudo portmaster -Gdy \*/p5-HTTP-Proxy
 </pre>
 
