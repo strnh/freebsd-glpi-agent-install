@@ -134,3 +134,9 @@ Configuring GLPI-Agent-1.5-dev ... OK
 
 </pre>
 
+# for Debian 
+
+<pre>
+# apt-get install libhttp-proxy-perl libxml-simple-perl
+</pre>
+
