@@ -123,3 +123,14 @@ Countermeasure:
 <pre>
 $ sudo portmaster -Gdy textproc/p5-XML-LibXML www/p5-HTTP-Proxy
 </pre>
+
+# check dependency 
+<pre>
+
+$ sudo cpanm --installdeps .                                                
+--> Working on .
+Configuring GLPI-Agent-1.5-dev ... OK
+<== Installed dependencies for .. Finishing.
+
+</pre>
+
