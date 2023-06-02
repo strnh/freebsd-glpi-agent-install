@@ -142,7 +142,8 @@ Configuring GLPI-Agent-1.5-dev ... OK
 
 </pre>
 
-# Problem lack of XML-SAX
+# Problem lack of XML/LibXML and XML-SAX
+## LibXML 
 <pre>
 # glpi-inventory 
 Can't locate XML/LibXML.pm in @INC (you may need to install the XML::LibXML module) (@INC contains: /usr/local/share/glpi-agent/lib /usr/local/lib/perl5/site_perl/mach/5.32 /usr/local/lib/perl5/site_perl /usr/local/lib/perl5/5.32/mach /usr/local/lib/perl5/5.32) at /usr/local/share/glpi-agent/lib/GLPI/Agent/XML.pm line 6.
@@ -155,7 +156,7 @@ Compilation failed in require at /usr/local/bin/glpi-inventory line 14.
 BEGIN failed--compilation aborted at /usr/local/bin/glpi-inventory line 14.
 
 </pre>
-
+## XML-SAX 
 require .. ''glpi-inventory''
 
 <pre>
