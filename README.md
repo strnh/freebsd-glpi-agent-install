@@ -138,5 +138,146 @@ Configuring GLPI-Agent-1.5-dev ... OK
 
 <pre>
 # apt-get install libhttp-proxy-perl libxml-simple-perl
+
+
 </pre>
 
+
+## daemon mode
+stack by lack of Clone.pm ..
+
+<pre>
+/usr/local/bin/glpi-agent --daemon    
+[info] GLPI Agent starting
+[error] Failed to load HTTP server: Can't locate Clone.pm in @INC (you may need to install the Clone module) (@INC contains: /usr/local/share/glpi-agent/lib /usr/local/lib/perl5/site_perl/mach/5.36 /usr/local/lib/perl5/site_perl /usr/local/lib/perl5/5.36/mach /usr/local/lib/perl5/5.36) at /usr/local/lib/perl5/site_perl/HTTP/Headers.pm line 8.
+BEGIN failed--compilation aborted at /usr/local/lib/perl5/site_perl/HTTP/Headers.pm line 8.
+Compilation failed in require at /usr/local/lib/perl5/site_perl/HTTP/Message.pm line 8.
+Compilation failed in require at /usr/local/lib/perl5/5.36/parent.pm line 16.
+BEGIN failed--compilation aborted at /usr/local/lib/perl5/site_perl/HTTP/Request.pm line 8.
+Compilation failed in require at /usr/local/lib/perl5/site_perl/HTTP/Daemon.pm line 85.
+BEGIN failed--compilation aborted at /usr/local/lib/perl5/site_perl/HTTP/Daemon.pm line 85.
+Compilation failed in require at /usr/local/share/glpi-agent/lib/GLPI/Agent/HTTP/Server.pm line 9.
+BEGIN failed--compilation aborted at /usr/local/share/glpi-agent/lib/GLPI/Agent/HTTP/Server.pm line 9.
+Compilation failed in require at /usr/local/share/glpi-agent/lib/GLPI/Agent/Daemon.pm line 708.
+[info] target server0: next run: Fri Jun  2 11:44:16 2023 - https://glpi.shorijo.cmk.or.jp/
+^C[info] GLPI Agent exiting (81225)
+
+</pre>
+
+... What?? 
+
+<pre>
+# cd /usr/ports/*/p5-Clone
+# portmaster -Gdty --no-confirm                                                              
+
+===>>> Currently installed version: p5-Clone-0.46
+===>>> Port directory: /usr/ports/devel/p5-Clone
+
+===>>> Gathering distinfo list for installed ports
+
+===>>> Launching 'make checksum' for devel/p5-Clone in background
+===>>> Gathering dependency list for devel/p5-Clone from ports
+===>>> Initial dependency check complete for devel/p5-Clone
+
+
+===>>> Starting build for devel/p5-Clone <<<===
+
+===>>> All dependencies are up to date
+
+===>  Cleaning for p5-Clone-0.46
+===>>> Waiting on fetch & checksum for devel/p5-Clone <<<===
+===>  License ART10 GPLv1+ accepted by the user
+===>   p5-Clone-0.46 depends on file: /usr/local/sbin/pkg - found
+=> Clone-0.46.tar.gz doesn't seem to exist in /usr/ports/distfiles//.
+=> Attempting to fetch https://cpan.metacpan.org/modules/by-module/Clone/Clone-0.46.tar.gz
+
+
+===>  License ART10 GPLv1+ accepted by the user
+===>   p5-Clone-0.46 depends on file: /usr/local/sbin/pkg - found
+===> Fetching all distfiles required by p5-Clone-0.46 for building
+===>  Extracting for p5-Clone-0.46
+=> SHA256 Checksum OK for Clone-0.46.tar.gz.
+===>  Patching for p5-Clone-0.46
+===>   p5-Clone-0.46 depends on package: perl5>=5.36<5.37 - found
+===>  Configuring for p5-Clone-0.46
+Checking if your kit is complete...
+Looks good
+Warning: prerequisite B::COW 0.004 not found.
+Generating a Unix-style Makefile
+Writing Makefile for Clone
+Writing MYMETA.yml and MYMETA.json
+===>  Building for p5-Clone-0.46
+--- blib/lib/.exists ---
+--- blib/arch/.exists ---
+--- blib/lib/auto/Clone/.exists ---
+--- blib/arch/auto/Clone/.exists ---
+--- blib/bin/.exists ---
+--- blib/script/.exists ---
+--- blib/man1/.exists ---
+--- blib/man3/.exists ---
+--- config ---
+--- subdirs ---
+--- dynamic ---
+--- blibdirs ---
+--- Clone.c ---
+--- Clone.bs ---
+--- pm_to_blib ---
+--- config ---
+--- Clone.c ---
+"/usr/local/bin/perl" "/usr/local/lib/perl5/5.36/ExtUtils/xsubpp"  -typemap '/usr/local/lib/perl5/5.36/ExtUtils/typemap'  Clone.xs > Clone.xsc
+--- Clone.bs ---
+Running Mkbootstrap for Clone ()
+chmod 644 "Clone.bs"
+--- blib/arch/auto/Clone/Clone.bs ---
+"/usr/local/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Clone.bs blib/arch/auto/Clone/Clone.bs 644
+--- pm_to_blib ---
+cp Clone.pm blib/lib/Clone.pm
+AutoSplitting blib/lib/Clone.pm (blib/lib/auto/Clone)
+--- Clone.c ---
+mv Clone.xsc Clone.c
+--- Clone.o ---
+cc -c    -O2 -pipe  -fstack-protector-strong -fno-strict-aliasing -O2 -pipe -fstack-protector-strong -fno-strict-aliasing    -DVERSION=\"0.46\"  -DXS_VERSION=\"0.46\" -DPIC -fPIC "-I/usr/local/lib/perl5/5.36/mach/CORE"   Clone.c
+--- blib/arch/auto/Clone/Clone.so ---
+rm -f blib/arch/auto/Clone/Clone.so
+cc  -shared  -L/usr/local/lib/perl5/5.36/mach/CORE -lperl -L/usr/local/lib -fstack-protector-strong  Clone.o  -o blib/arch/auto/Clone/Clone.so        
+chmod 755 blib/arch/auto/Clone/Clone.so
+--- dynamic ---
+--- linkext ---
+--- pure_all ---
+--- manifypods ---
+Manifying 1 pod document
+--- all ---
+===>>> Building the port required 0 seconds
+===>  Staging for p5-Clone-0.46
+===>   Generating temporary packing list
+"/usr/local/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Clone.bs blib/arch/auto/Clone/Clone.bs 644
+Manifying 1 pod document
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /usr/ports/devel/p5-Clone/work/stage/usr/local/lib/perl5/site_perl/mach/5.36/auto/Clone/Clone.so
+Installing /usr/ports/devel/p5-Clone/work/stage/usr/local/lib/perl5/site_perl/mach/5.36/Clone.pm
+Installing /usr/ports/devel/p5-Clone/work/stage/usr/local/lib/perl5/site_perl/mach/5.36/auto/Clone/autosplit.ix
+Installing /usr/ports/devel/p5-Clone/work/stage/usr/local/lib/perl5/site_perl/man/man3/Clone.3
+/usr/bin/strip /usr/ports/devel/p5-Clone/work/stage/usr/local/lib/perl5/site_perl/mach/5.36/auto/Clone/Clone.so
+====> Compressing man pages (compress-man)
+
+===>>> Creating a backup package for old version p5-Clone-0.46
+Creating package for p5-Clone-0.46
+Updating database digests format: 100%
+Checking integrity... done (0 conflicting)
+Deinstallation has been requested for the following 1 packages (of 0 packages in the universe):
+
+Installed packages to be REMOVED:
+	p5-Clone: 0.46
+
+Number of packages to be removed: 1
+[1/1] Deinstalling p5-Clone-0.46...
+[1/1] Deleting files for p5-Clone-0.46: 100%
+
+===>  Installing for p5-Clone-0.46
+===>  Checking if p5-Clone is already installed
+===>   Registering installation for p5-Clone-0.46 as automatic
+Installing p5-Clone-0.46...
+
+===>>> Re-installation of p5-Clone-0.46 complete
+
+</pre>
