@@ -153,7 +153,7 @@ p5-XML-SAX-Base-1.09           Base class SAX Drivers and Filters
 
 If lack these perl-packges no inventory send to server.
 
-## daemon mode
+# daemon mode
 stack by lack of Clone.pm ..
 
 <pre>
