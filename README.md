@@ -141,7 +141,16 @@ Configuring GLPI-Agent-1.5-dev ... OK
 
 
 </pre>
+## XML-SAX
+require .. ''glpi-inventory''
 
+<pre>
+p5-XML-NamespaceSupport-1.12   Simple generic namespace support class
+p5-XML-SAX-1.02                Simple API for XML
+p5-XML-SAX-Base-1.09           Base class SAX Drivers and Filters
+</pre>
+
+If lack these perl-packges no inventory send to server.
 
 ## daemon mode
 stack by lack of Clone.pm ..
