@@ -16,7 +16,7 @@ The glpi-agent settings are as follows:
 https://github.com/glpi-project/glpi-agent 
 * Since multiple perl modules are required, the following tasks are performed: 
 * Introduction of cpan-minus  
---  Install → p5-module-instlall from /usr/ports 
+--  Install → p5-module-install from /usr/ports 
 Exapmle:
 <pre>
 
