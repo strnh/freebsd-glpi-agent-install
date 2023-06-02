@@ -138,6 +138,42 @@ Configuring GLPI-Agent-1.5-dev ... OK
 
 <pre>
 # apt-get install libhttp-proxy-perl libxml-simple-perl
+</pre>
+# for Raspian 
+
+if not installed Module::Install then use CPAN installer.
+
+<pre>
+# cpan --install Module::Install
+Loading internal logger. Log::Log4perl recommended for better logging
+
+CPAN.pm requires configuration, but most of it can be done automatically.
+If you answer 'no' below, you will enter an interactive dialog for each
+configuration option instead.
+
+Would you like to configure as much as possible automatically? [yes] Y
+Fetching with LWP:http://www.cpan.org/authors/01mailrc.txt.gz
+Reading '/root/.cpan/sources/authors/01mailrc.txt.gz'
+............................................................................DONE
+Fetching with LWP:
+http://www.cpan.org/modules/02packages.details.txt.gz
+Reading '/root/.cpan/sources/modules/02packages.details.txt.gz'
+  Database was generated on Fri, 02 Jun 2023 01:53:58 GMT
+Warning: Your system date is 17 days behind this index file!
+  System time:          Mon May 15 14:04:57 2023
+  Timestamp index file: Fri, 02 Jun 2023 01:53:58 GMT
+  Please fix your system time, problems with the make command expected.
+..............
+  New CPAN.pm version (v2.36) available.
+  [Currently running version is v2.27]
+  You might want to try
+    install CPAN
+    reload cpan
+  to both upgrade CPAN.pm and run the new version without leaving
+  the current session.
+
+... snip ...
+
 
 
 </pre>
