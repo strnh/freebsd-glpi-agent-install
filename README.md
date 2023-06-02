@@ -141,7 +141,8 @@ Configuring GLPI-Agent-1.5-dev ... OK
 
 
 </pre>
-## XML-SAX
+
+# Problem lack of XML-SAX
 require .. ''glpi-inventory''
 
 <pre>
